@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diya Patel | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      padding: 80px 0;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #67e8f9;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 0 auto 25px;
+    }
+
+    nav {
+      background: #111827;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #67e8f9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #67e8f9;
+      color: #0f172a;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      margin: 8px;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #67e8f9;
+      text-align: center;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      margin-top: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .skill {
+      background: #164e63;
+      color: #cffafe;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .project p {
+      color: #cbd5e1;
+      margin-bottom: 12px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+    }
+
+    .contact-info {
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 1rem;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #94a3b8;
+      background: #111827;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <h1>Diya Patel</h1>
+      <p>Data Science student passionate about analytics, machine learning, databases, and turning data into useful insights.</p>
+      <a class="btn" href="#projects">View Projects</a>
+      <a class="btn" href="#contact">Contact Me</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>
+          I am a Data Science student at UNC Charlotte who enjoys building projects in machine learning, analytics, and database design. I like solving problems with data, learning new tools, and presenting results in a clear and professional way.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>University of North Carolina at Charlotte</h3>
+          <p>B.S. in Data Science</p>
+          <p>Expected Graduation: May 2026</p>
+        </div>
+        <div class="card">
+          <h3>Wake Tech Community College</h3>
+          <p>Associate of Arts in Accounting & Finance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <span class="skill">Python</span>
+        <span class="skill">SQL</span>
+        <span class="skill">R</span>
+        <span class="skill">Java</span>
+        <span class="skill">Pandas</span>
+        <span class="skill">NumPy</span>
+        <span class="skill">scikit-learn</span>
+        <span class="skill">Tableau</span>
+        <span class="skill">Power BI</span>
+        <span class="skill">GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card project">
+          <h3>Crime Data Classification Project</h3>
+          <p>Built a machine learning workflow to analyze crime patterns and classify incident types using data cleaning, feature engineering, and model evaluation.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">EDA</span>
+          </div>
+        </div>
+
+        <div class="card project">
+          <h3>Heart Disease Prediction</h3>
+          <p>Created predictive models on a healthcare dataset and compared multiple classification methods to evaluate model performance.</p>
+          <div class="tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Classification</span>
+            <span class="tag">Data Analysis</span>
+          </div>
+        </div>
+
+        <div class="card project">
+          <h3>Student Wellness and Fitness Database</h3>
+          <p>Designed a relational database system for memberships, trainers, schedules, reservations, and attendance tracking.</p>
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Database Design</span>
+            <span class="tag">ER Modeling</span>
+          </div>
+        </div>
+
+        <div class="card project">
+          <h3>School Shootings Policy Analysis</h3>
+          <p>Worked on a research-focused data project examining how policy variables may relate to incident frequency and severity.</p>
+          <div class="tags">
+            <span class="tag">Research</span>
+            <span class="tag">Policy Analysis</span>
+            <span class="tag">Data Storytelling</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="container">
+      <h2>Resume</h2>
+      <div class="card" style="text-align:center;">
+        <p>Add your resume PDF file in this folder and link it here later.</p>
+        <br />
+        <a class="btn" href="#">Add Resume Link</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="card contact-info">
+        <p><strong>Email:</strong> your.email@example.com</p>
+        <p><strong>LinkedIn:</strong> linkedin.com/in/yourprofile</p>
+        <p><strong>GitHub:</strong> github.com/yourusername</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Diya Patel. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
