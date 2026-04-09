@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diya Patel | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -11,107 +12,191 @@
       box-sizing: border-box;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
     html {
       scroll-behavior: smooth;
     }
 
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #ffffff, #fffafc);
+      color: #111827;
+      line-height: 1.6;
+    }
+
     .container {
       width: 90%;
-      max-width: 1100px;
+      max-width: 1120px;
       margin: auto;
     }
 
-    header {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      padding: 80px 0;
-      text-align: center;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      color: #67e8f9;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #cbd5e1;
-      max-width: 700px;
-      margin: 0 auto 25px;
-    }
-
     nav {
-      background: #111827;
-      padding: 15px 0;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      padding: 16px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid #f1f5f9;
     }
 
     nav .container {
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 24px;
       flex-wrap: wrap;
     }
 
     nav a {
-      color: #e2e8f0;
+      color: #4b5563;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
+      transition: 0.3s ease;
     }
 
     nav a:hover {
-      color: #67e8f9;
+      color: #ec4899;
+    }
+
+    header {
+      background: linear-gradient(135deg, #fff1f2, #eff6ff, #f5f3ff, #fdf2f8);
+      padding: 95px 0 85px;
+      text-align: center;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      margin: 0 auto 22px;
+      background: linear-gradient(135deg, #ef4444, #8b5cf6, #ec4899);
+      box-shadow: 0 18px 40px rgba(236, 72, 153, 0.25);
+    }
+
+    .hero-name {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ef4444, #3b82f6, #8b5cf6, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #6b7280;
+      max-width: 760px;
+      margin: 0 auto 28px;
+    }
+
+    .hero-mini {
+      color: #7c3aed;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 0.4px;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 24px;
-      background: #67e8f9;
-      color: #0f172a;
+      padding: 13px 24px;
       text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
+      border-radius: 999px;
+      font-weight: 700;
       margin: 8px;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #ef4444, #8b5cf6, #ec4899);
+      color: #ffffff;
+      box-shadow: 0 10px 24px rgba(236, 72, 153, 0.18);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #374151;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
     }
 
     .btn:hover {
-      opacity: 0.9;
+      transform: translateY(-3px);
     }
 
     section {
-      padding: 70px 0;
+      padding: 80px 0;
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #67e8f9;
+    .section-title {
       text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 28px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ef4444, #3b82f6, #8b5cf6, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-title i {
+      margin-right: 10px;
     }
 
     .card {
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid #f1f5f9;
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
       margin-top: 20px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
+
+    .about-text {
+      text-align: center;
+      color: #4b5563;
+      font-size: 1.05rem;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .mini-feature h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .mini-feature p {
+      color: #6b7280;
+      font-size: 0.97rem;
+    }
+
+    .edu-card h3,
+    .project h3 {
+      margin-bottom: 10px;
+      color: #111827;
+      font-size: 1.15rem;
+    }
+
+    .edu-card p,
+    .project p {
+      color: #6b7280;
     }
 
     .skills-list {
@@ -123,62 +208,97 @@
     }
 
     .skill {
-      background: #164e63;
-      color: #cffafe;
+      background: linear-gradient(90deg, #fee2e2, #dbeafe, #ede9fe, #fce7f3);
+      color: #374151;
       padding: 10px 16px;
       border-radius: 999px;
       font-size: 0.95rem;
-    }
-
-    .project h3 {
-      margin-bottom: 10px;
-      color: #ffffff;
-    }
-
-    .project p {
-      color: #cbd5e1;
-      margin-bottom: 12px;
+      font-weight: 700;
+      border: 1px solid #f3f4f6;
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+      margin-top: 14px;
     }
 
     .tag {
-      background: #0f172a;
-      color: #cbd5e1;
-      padding: 6px 10px;
+      background: #f8fafc;
+      color: #4b5563;
+      padding: 7px 12px;
       border-radius: 999px;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
+      border: 1px solid #e5e7eb;
     }
 
+    .project-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: #8b5cf6;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      color: #ec4899;
+      text-decoration: underline;
+    }
+
+    .resume-box,
     .contact-info {
       text-align: center;
-      color: #cbd5e1;
+    }
+
+    .resume-box p,
+    .contact-info p {
+      color: #6b7280;
+      margin: 10px 0;
       font-size: 1rem;
     }
 
-    .contact-info p {
-      margin: 10px 0;
+    .contact-info a {
+      color: #8b5cf6;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+      color: #ec4899;
+    }
+
+    .social-row {
+      margin-top: 18px;
     }
 
     footer {
       text-align: center;
-      padding: 25px 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 26px 0;
+      border-top: 1px solid #e5e7eb;
       color: #94a3b8;
-      background: #111827;
+      background: transparent;
+      margin-top: 20px;
     }
 
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2rem;
+      .hero-name {
+        font-size: 2.5rem;
       }
 
-      h2 {
-        font-size: 1.7rem;
+      .section-title {
+        font-size: 1.9rem;
+      }
+
+      header {
+        padding: 78px 0 72px;
+      }
+
+      .avatar {
+        width: 120px;
+        height: 120px;
+        font-size: 2.4rem;
       }
     }
   </style>
@@ -198,34 +318,62 @@
 
   <header>
     <div class="container">
-      <h1>Diya Patel</h1>
-      <p>Data Science student passionate about analytics, machine learning, databases, and turning data into useful insights.</p>
-      <a class="btn" href="#projects">View Projects</a>
-      <a class="btn" href="#contact">Contact Me</a>
+      <div class="avatar">DP</div>
+      <p class="hero-mini">Aspiring Data Analyst • Data Science Student</p>
+      <h1 class="hero-name">Diya Patel</h1>
+      <p class="hero-subtitle">
+        Data Science student passionate about analytics, machine learning, databases, and turning data into meaningful insights.
+      </p>
+      <a class="btn btn-primary" href="#projects">View Projects</a>
+      <a class="btn btn-secondary" href="#contact">Contact Me</a>
+
+      <div class="social-row">
+        <a class="btn btn-secondary" href="https://github.com/diyuptl26" target="_blank">GitHub</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/diyapatel2611/" target="_blank">LinkedIn</a>
+      </div>
     </div>
   </header>
 
   <section id="about">
     <div class="container">
-      <h2>About Me</h2>
+      <h2 class="section-title"><i class="fas fa-user"></i> About Me</h2>
+
       <div class="card">
-        <p>
-          I am a Data Science student at UNC Charlotte who enjoys building projects in machine learning, analytics, and database design. I like solving problems with data, learning new tools, and presenting results in a clear and professional way.
+        <p class="about-text">
+          I’m a Data Science student at UNC Charlotte with a strong interest in analytics, machine learning, and solving real-world problems using data.
         </p>
+        <p class="about-text" style="margin-top: 14px;">
+          I enjoy transforming raw data into meaningful insights through analysis, predictive modeling, visualization, and database design. I’m always excited to learn new tools and build projects that combine technical skills with practical impact.
+        </p>
+      </div>
+
+      <div class="grid" style="margin-top: 28px;">
+        <div class="card mini-feature">
+          <h3>📊 Data Analytics</h3>
+          <p>Exploring patterns, trends, and insights through data analysis and dashboards.</p>
+        </div>
+        <div class="card mini-feature">
+          <h3>🤖 Machine Learning</h3>
+          <p>Building and evaluating predictive models for real-world problems.</p>
+        </div>
+        <div class="card mini-feature">
+          <h3>🗄️ Databases</h3>
+          <p>Designing structured systems using SQL, ER models, and relational thinking.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="education">
     <div class="container">
-      <h2>Education</h2>
+      <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
       <div class="grid">
-        <div class="card">
+        <div class="card edu-card">
           <h3>University of North Carolina at Charlotte</h3>
           <p>B.S. in Data Science</p>
           <p>Expected Graduation: May 2026</p>
         </div>
-        <div class="card">
+        <div class="card edu-card">
           <h3>Wake Tech Community College</h3>
           <p>Associate of Arts in Accounting & Finance</p>
         </div>
@@ -235,7 +383,7 @@
 
   <section id="skills">
     <div class="container">
-      <h2>Skills</h2>
+      <h2 class="section-title"><i class="fas fa-code"></i> Skills</h2>
       <div class="skills-list">
         <span class="skill">Python</span>
         <span class="skill">SQL</span>
@@ -253,10 +401,10 @@
 
   <section id="projects">
     <div class="container">
-      <h2>Projects</h2>
+      <h2 class="section-title"><i class="fas fa-laptop-code"></i> Projects</h2>
       <div class="grid">
         <div class="card project">
-          <h3>Crime Data Classification Project</h3>
+          <h3>Crime Prediction</h3>
           <p>Built a machine learning workflow to analyze crime patterns and classify incident types using data cleaning, feature engineering, and model evaluation.</p>
           <div class="tags">
             <span class="tag">Python</span>
@@ -264,6 +412,7 @@
             <span class="tag">scikit-learn</span>
             <span class="tag">EDA</span>
           </div>
+          <a class="project-link" href="https://github.com/diyuptl26/Crime-Prediction" target="_blank">View Project</a>
         </div>
 
         <div class="card project">
@@ -274,26 +423,29 @@
             <span class="tag">Classification</span>
             <span class="tag">Data Analysis</span>
           </div>
+          <a class="project-link" href="https://github.com/diyuptl26/Heart-Disease-" target="_blank">View Project</a>
         </div>
 
         <div class="card project">
-          <h3>Student Wellness and Fitness Database</h3>
+          <h3>Weather Data Exploration</h3>
+          <p>Analyzed weather datasets to identify trends, patterns, and insights using exploratory data analysis and visualization techniques.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">EDA</span>
+          </div>
+          <a class="project-link" href="https://github.com/diyuptl26/Weather-data-exploration" target="_blank">View Project</a>
+        </div>
+
+        <div class="card project">
+          <h3>Student Wellness and Fitness Center Database</h3>
           <p>Designed a relational database system for memberships, trainers, schedules, reservations, and attendance tracking.</p>
           <div class="tags">
             <span class="tag">SQL</span>
             <span class="tag">Database Design</span>
             <span class="tag">ER Modeling</span>
           </div>
-        </div>
-
-        <div class="card project">
-          <h3>School Shootings Policy Analysis</h3>
-          <p>Worked on a research-focused data project examining how policy variables may relate to incident frequency and severity.</p>
-          <div class="tags">
-            <span class="tag">Research</span>
-            <span class="tag">Policy Analysis</span>
-            <span class="tag">Data Storytelling</span>
-          </div>
+          <a class="project-link" href="https://github.com/diyuptl26/Project-for-Student-Wellness-and-Fitness-Center-" target="_blank">View Project</a>
         </div>
       </div>
     </div>
@@ -301,22 +453,21 @@
 
   <section id="resume">
     <div class="container">
-      <h2>Resume</h2>
-      <div class="card" style="text-align:center;">
-        <p>Add your resume PDF file in this folder and link it here later.</p>
-        <br />
-        <a class="btn" href="#">Add Resume Link</a>
+      <h2 class="section-title"><i class="fas fa-file"></i> Resume</h2>
+      <div class="card resume-box">
+        <p>Upload your resume PDF to this repository and connect it here.</p>
+        <a class="btn btn-primary" href="#">View Resume</a>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <div class="container">
-      <h2>Contact</h2>
+      <h2 class="section-title"><i class="fas fa-envelope"></i> Contact</h2>
       <div class="card contact-info">
-        <p><strong>Email:</strong> your.email@example.com</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/yourprofile</p>
-        <p><strong>GitHub:</strong> github.com/yourusername</p>
+        <p><strong>Email:</strong> <a href="mailto:diyawork2611@gmail.com">diyawork2611@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/diyapatel2611/" target="_blank">linkedin.com/in/diyapatel2611</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/diyuptl26" target="_blank">github.com/diyuptl26</a></p>
       </div>
     </div>
   </section>
